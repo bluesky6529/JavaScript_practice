@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <title>猜一個0到10之間的整數-JS練習</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+
+    <p>猜一個0到10之間的整數</p>
+    <input id="myInput" type="text" value="" />
+    <button id="myButton">提交</button>
+
+
+    <script type="text/javascript">
+
+        document.getElementById('myButton').onclick = function () {
+            var x = Math.random();
+            /*生成一個0~10的數字*/
+            x = x * 11;
+            x = Math.floor(x);
+
+            console.log(x);
+            if (x==document.getElementById('myInput').value) {
+                alert("恭喜，您猜對了");
+
+            } else {
+                alert("您猜錯了，數字為"+x);
+            }
+        }
+
+
+
+    </script>
+
+    </script>
+
+
+</body>
+
+</html>

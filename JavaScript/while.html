@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <title>while 練習-JS</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+
+    <p>猜一個整數</p>
+    <input id="myInput" type="text" value="" />
+    <button id="myButton">提交</button>
+
+
+    <script type="text/javascript">
+
+        document.getElementById('myButton').onclick = function () {
+            var gotIt = false;
+            var guess = 1;
+            var x;
+
+            while (gotIt == false) {
+
+                x = Math.random();
+                /*生成一個0~10的數字*/
+                x = x * 11;
+                x = Math.floor(x);
+
+                console.log(x);
+                if (x == document.getElementById('myInput').value) {
+                    gotIt = true;
+
+                } else {
+                    guess++;
+                }
+            }
+            alert("恭喜瀏覽器用了" + guess + "遍 猜對了,這個隨機數為" + x);
+        }
+
+    </script>
+
+
+</body>
+
+</html>

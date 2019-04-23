@@ -2,31 +2,123 @@
 <html lang="zh-Hant-TW">
 
 <head>
-    <title>My ebay</title>
+    <title>Learn JS</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
 
+    <style>
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 100%;
+            /*display: none;*/
+        }
     </style>
 </head>
 
 <body>
-    <!--------------Header----------->
-    <header>
-        <div class="container">
-            <ul ckass="navnar">
-                <li class="navItem">Hi! <a href="#">Sign in</a> or <a href="#">register</a> </li>
-                <li class="navItem"><a href="#">Daily Deals</a> </li>
-                <li class="navItem"><a href="#">Shell</a> </li>
-                <li class="navItem"><a href="#">Help & Contact</a> </li>
-                <li class="navItem">1 </li>
-                <li class="navItem">2 </li>
-                <li class="navItem">3 </li>
-            </ul>
-        </div>
-    </header>
+
+    <!---for練習-->
+
+
+
+    
+
+    <!---if練習-->
+    <p>今天天氣如何?</p>
+    <input id="myInput1" type="text" value="my Value" />
+    <button id="myButton4">提交</button>
+
+
+    <script type="text/javascript">
+        document.getElementById('myButton4').onclick = function () {
+            if (document.getElementById('myInput1').value == "下雨") {
+                alert("今天下雨");
+            } else {
+                alert("今天沒下雨");
+            }
+        }
+
+
+        /*var x=2;
+            if (x == 1){
+                alert("x=1");
+            }else{
+                alert("x不等於1");
+            }*/
+
+    </script>
+    <br><br><br><br><br><br><br>
+
+    <!---JS變量-->
+    <!---用戶按下按鈕，會顯示輸入的內容-->
+    <input id="myInput" type="text" value="my Value" />
+    <button id="myButton3">請點我</button>
+
+    <p id="text3">原來一段文字</p>
+
+    <script type="text/javascript">
+        var myArray = ["pizza", "chocolate"];
+        myArray.push("apple");
+
+
+
+        console.log(myArray);
+        myArray.splice(1, 0, "orange");
+        console.log(myArray);
+
+        //var myVariable = document.getElementById('myInput').value;
+
+        document.getElementById('myButton3').onclick = function () {
+
+            //myVariable = document.getElementById('myInput').value;
+            document.getElementById("text3").innerHTML = myArray[0];
+
+        }
+
+    </script>
+    <!---消失的圓-->
+    <div id="circle"></div>
+
+    <script type="text/javascript">
+
+        var myVariable1 = 'circle';
+        document.getElementById('circle').onclick = function () {
+            document.getElementById('circle').style.display = "none";
+
+        }
+    </script>
+
+
+
+
+    <!--button 練習--->
+    <button id="myButton">請點我</button>
+    <p id="text">原來一段文字</p>
+    <br><br>
+    <button id="myButton1">請點我</button>
+    <p id="text1">我想添加:</p>
+    <br><br>
+    <button id="myButton2">請點我</button>
+    <p id="text2"></p>
+
+    <script type="text/javascript">
+        //  document.getElementById('text').innerHTML="修改後的文字";
+        document.getElementById("myButton").onclick = function () {
+            document.getElementById("text").innerHTML = "新的一段文字";
+        }
+        document.getElementById("myButton1").onclick = function () {
+            document.getElementById("text1").innerHTML = document.getElementById('text1').innerHTML + "一段文字";
+        }
+        document.getElementById("myButton2").onclick = function () {
+            document.getElementById("text2").innerHTML = "<ul><li>蘋果</li><li>banabna</li></ul>";
+        }
+    </script>
+
+
 </body>
 
 </html>
